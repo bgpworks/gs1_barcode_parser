@@ -5,6 +5,7 @@ GS1 Barcode parser
 ## Example
 
 Parse code-128 with FNC1
+
 ```dart
     final String barcode =
           ']C101040123456789011715012910ABC1233932971471131030005253922471142127649716';
@@ -12,7 +13,9 @@ Parse code-128 with FNC1
     final result = parser.parse(barcode);
     print(result);
 ```
+
 Result
+
 ```text
     code = GS1-128,
     data = {
@@ -26,3 +29,8 @@ Result
     }
 ```
 
+## Export to Javascript
+
+```sh
+dart compile js -o gs1_parser.js lib/js.dart
+```
